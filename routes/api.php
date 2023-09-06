@@ -19,6 +19,11 @@ Route::post('hotel', [HotelController::class, 'guardar']);
 Route::get('hotel/{id}/editar', [HotelController::class,'editar',]);
 Route::put('hotel/{id}', [HotelController::class,'actualizar',]);
 Route::delete('hotel/{id}', [HotelController::class,'eliminar',]);
+Route::get('/tipos/{id}',[HotelController::class, 'tipos']);
+Route::get('/acomodacionh/{id}/{tipo}',[HotelController::class, 'acomodacionh']);
+Route::get('/get_cantidad_f/{id}',[HotelController::class, 'get_cantidad_f']);
+Route::post('/acomodacionh/{id}',[HotelController::class, 'acomodacionh_guardar']);
+Route::delete('acomodacionh/{id}', [HotelController::class,'acomodacionh_eliminar',]);
 
 
 
